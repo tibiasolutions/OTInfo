@@ -15,7 +15,7 @@ namespace OTInfo
         private static int cache = 120;
         private string path;
 
-        public Server Info = new Server();
+        public Server info = new Server();
 
         public ServerInformation(string host, int port = 7171)
         {
@@ -31,7 +31,7 @@ namespace OTInfo
             if (cache > 0 && File.Exists(cache_uri) && File.GetLastWriteTime(cache_uri).AddSeconds(cache) >= DateTime.Now)
             {
                 string json = File.ReadAllText(cache_uri);
-                Info = JsonConvert.DeserializeObject<Server>(json);
+                info = JsonConvert.DeserializeObject<Server>(json);
                 return true;
             }
             else
@@ -54,9 +54,9 @@ namespace OTInfo
 
                     XmlNode node = doc.LastChild;
 
-                    Info = JsonConvert.DeserializeObject<Server>(JsonConvert.SerializeXmlNode(node));
+                    info = JsonConvert.DeserializeObject<Server>(JsonConvert.SerializeXmlNode(node));
 
-                    var json = JsonConvert.SerializeObject(Info);
+                    var json = JsonConvert.SerializeObject(info);
                     File.WriteAllText(cache_uri, json);
 
                     return true;
