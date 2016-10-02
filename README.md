@@ -11,7 +11,7 @@ using OTInfo;
 
 Get started
 ------
-**To instantiate an otserv, create a new OTInfo object**
+**To instantiate an otserv, create a new ServerInformation object**
 ```csharp
 ServerInformation server = new ServerInformation("www.aurera-global.com");
 ```
@@ -26,7 +26,7 @@ if (server.Execute()) {
   // these are just a few examples
 } else {
   Console.WriteLine("Server offline.");
-  // if execute() returns false, the server are offline
+  // if Execute() returns false, the server are offline
 }
 ```
 The `Execute()' method catch/parse the responses returned by server and return false if server are offline.
