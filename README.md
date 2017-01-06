@@ -20,9 +20,9 @@ The first parameter is the server `host/ip`, and the second is the `port` (defin
 **Get informations**
 ```csharp
 if (server.Execute()) {
-  Console.WriteLine("Players online: " + server.info.tsqp.players.online);
-  Console.WriteLine("Server location: " + server.info.tsqp.serverinfo.location);
-  Console.WriteLine("Client version: " + server.info.tsqp.serverinfo.version);
+  Console.WriteLine("Players online: " + server.players.online);
+  Console.WriteLine("Server location: " + server.serverinfo.location);
+  Console.WriteLine("Client version: " + server.serverinfo.version);
   // these are just a few examples
 } else {
   Console.WriteLine("Server offline.");
