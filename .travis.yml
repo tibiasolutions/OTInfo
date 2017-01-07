@@ -3,3 +3,6 @@ solution: src/OTInfo.sln
 install:
   - nuget install Newtonsoft.Json -Version 9.0.1
   - nuget restore src/OTInfo.sln
+
+notifications:
+  email: false
