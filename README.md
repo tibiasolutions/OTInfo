@@ -1,4 +1,4 @@
-OTServer Info
+OTServer Info [![Build Status](https://travis-ci.org/tibiasolutions/OTInfo.svg?branch=master)](https://travis-ci.org/tibiasolutions/OTInfo)
 ======
 Catch information from servers' response by ip and port
 
